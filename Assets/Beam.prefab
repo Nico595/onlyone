@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6822026876614418527}
   - component: {fileID: 6822026876614418526}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Beam
   m_TagString: Untagged
   m_Icon: {fileID: 0}

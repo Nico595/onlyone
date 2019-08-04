@@ -7,7 +7,8 @@ public class LaserScript : MonoBehaviour
     public GameObject laserStart;
     public GameObject laserMiddle;
     public GameObject laserEnd;
-    public GameObject endExplosion;
+    public ParticleSystem endExplosion;
+    
 
     private GameObject start;
     private GameObject middle;
@@ -55,10 +56,9 @@ public class LaserScript : MonoBehaviour
                     end = Instantiate(laserEnd) as GameObject;
                     end.transform.parent = this.transform;
                     end.transform.localPosition = Vector2.zero;
-
-                    
-
                 }
+
+                Instantiate(endExplosion, hit.point , Quaternion.identity);
             }
             else
             {
@@ -91,7 +91,6 @@ public class LaserScript : MonoBehaviour
             Destroy(middle);
             Destroy(end);
         }
-            
 
     }
 }
